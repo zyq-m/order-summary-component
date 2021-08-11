@@ -1,0 +1,169 @@
+@import 'global';
+@import 'variables';
+
+body {
+    background: $paleBlue url("/images/pattern-background-mobile.svg") no-repeat;
+    background-size: cover;
+    height: 44.3125rem;
+
+    @media (min-width: 48em) {
+        background: $paleBlue url("/images/pattern-background-desktop.svg") no-repeat;
+        height: 50.5625rem;
+    }
+}
+
+.bg-images {
+    background: url("/images/illustration-hero.svg") no-repeat;
+    background-size: cover;
+    width: 20.4375rem;
+    height: 10rem;
+    border-radius: 1.4rem 1.4rem 0 0;
+
+    @media (min-width: 48em) {
+        width: 25.375rem;
+        height: 12.375rem;
+    }
+}
+
+.container {
+    background: white;
+    width: 20.4375rem;
+    height: 27.4375rem;
+    border-radius: 0 0 1.4rem 1.4rem;
+    box-shadow: 0px 16px 24px -17px $desaturatedBlue;
+    
+    @media (min-width: 48em) {
+        width: 25.375rem;
+        height: 28.875rem;
+    }
+
+    .text {
+        width: 16.375rem;
+        @media (min-width: 48em) {
+            width: 18.375rem;
+        }
+        
+        h2, p {
+            margin: 0;
+            text-align: center;
+        }
+        
+        h2 {
+            padding-top: 2.3125rem;
+            color: $darkBlue;
+        }
+        
+        p {
+            padding-top: 1.8125rem;
+            color: $desaturatedBlue;
+            line-height: 1.6;
+        }
+    }
+    
+    .item-box {
+        margin-top: 2rem;
+        width: 17.5rem;
+        padding: 1rem;
+        background: $veryPaleBlue;
+        border-radius: 0.6rem;
+
+        @media (min-width: 48em) {
+            width: 19.875rem;
+        }
+
+        .item-text {
+            padding: 0 3.1875rem 0 1rem;
+
+            p {
+                margin: 0;
+            }
+
+            .type {
+                font-weight: 700;
+                color: $darkBlue;
+            }
+
+            .price {
+                color: $desaturatedBlue;
+            }
+
+        }
+
+        a {
+            margin: -1rem;
+
+            @media (min-width: 48em) {
+                margin-left: 1rem;
+            }
+
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: $brightBlue;
+
+            &:hover {
+                color: $desaturatedBlue;
+            }
+        }
+    }
+
+    .btn-box {
+        margin-top: 1.5rem;
+
+        .success-btn, a {
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .success-btn {
+            background: $brightBlue;
+            border: none;
+            border-radius: 0.6rem;
+            width: 17.5rem;
+            height: 3.125rem;
+
+            @media (min-width: 48em) {
+                width: 19.875rem;
+                height: 2.75rem;
+            }
+
+            font-size: 1rem;
+            color: white;
+            box-shadow: 0px 16px 24px -7px $desaturatedBlue;
+
+            &:hover {
+                background: $desaturatedBlue;
+            }
+        }
+
+        a {
+            margin-top: 1.75rem;
+            color: $desaturatedBlue;
+            text-decoration: none;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+
+.attribution {
+    position: relative;
+    top: 2rem;
+
+    @media (min-width: 48em) {
+        top: 3rem;
+    }
+
+    font-size: 0.7rem;
+    text-align: center;
+    
+    a {
+        color: $brightBlue;
+        text-decoration: none;
+        
+        &:hover {
+            color: $desaturatedBlue;
+        }
+    }
+}
