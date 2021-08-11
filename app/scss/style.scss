@@ -2,18 +2,18 @@
 @import 'variables';
 
 body {
-    background: $paleBlue url("/images/pattern-background-mobile.svg") no-repeat;
+    background: $paleBlue url(../images/pattern-background-mobile.svg) no-repeat;
     background-size: cover;
     height: 44.3125rem;
 
     @media (min-width: 48em) {
-        background: $paleBlue url("/images/pattern-background-desktop.svg") no-repeat;
+        background: $paleBlue url(../images/pattern-background-desktop.svg) no-repeat;
         height: 50.5625rem;
     }
 }
 
 .bg-images {
-    background: url("/images/illustration-hero.svg") no-repeat;
+    background: url(../images/illustration-hero.svg) no-repeat;
     background-size: cover;
     width: 20.4375rem;
     height: 10rem;
