@@ -2,143 +2,152 @@
 @import 'variables';
 
 body {
-    background: $paleBlue url(../images/pattern-background-mobile.svg) no-repeat;
-    background-size: cover;
-    height: 44.3125rem;
-
-    @media (min-width: 48em) {
-        background: $paleBlue url(../images/pattern-background-desktop.svg) no-repeat;
-        height: 50.5625rem;
-    }
-}
-
-.bg-images {
-    background: url(../images/illustration-hero.svg) no-repeat;
-    background-size: cover;
-    width: 20.4375rem;
-    height: 10rem;
-    border-radius: 1.4rem 1.4rem 0 0;
-
-    @media (min-width: 48em) {
-        width: 25.375rem;
-        height: 12.375rem;
-    }
-}
-
-.container {
-    background: white;
-    width: 20.4375rem;
-    height: 27.4375rem;
-    border-radius: 0 0 1.4rem 1.4rem;
-    box-shadow: 0px 16px 24px -17px $desaturatedBlue;
+    background-image: url("../images/pattern-background-mobile.svg");
+    background-color: $paleBlue;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 4.375rem 1.5rem;
     
-    @media (min-width: 48em) {
-        width: 25.375rem;
-        height: 28.875rem;
+    @media (min-width: 40em) {
+        background-image: url("../images/pattern-background-desktop.svg");
+        padding: 6.25rem 0;
+    }
+}
+
+.card {
+    background-color: $white;
+    overflow: hidden;
+    max-width: 21.4375rem;
+    margin: auto;
+    border-radius: 0.8rem;
+
+    @media (min-width: 40em) {
+        max-width: 28.125rem;
     }
 
-    .text {
-        width: 16.375rem;
-        @media (min-width: 48em) {
-            width: 18.375rem;
+    h1, h2, p {
+        margin-top: 0;
+    }
+
+    &__white {
+        padding: 2.375rem 0;
+
+        @media (min-width: 40em) {
+            padding: 3.3125rem 0;
         }
-        
-        h2, p {
-            margin: 0;
-            text-align: center;
+    }
+
+    &__bg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    article {
+        text-align: center;
+        margin: 0 1.625rem 1.875rem;
+
+        @media (min-width: 40em) {
+            margin: 0 2.625rem 1.875rem;
         }
-        
+    }
+
+    &__heading {
+        color: $darkBlue;
+        font-size: 1.5rem;
+        font-weight: 800;
+
+        @media (min-width: 40em) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__para {
+        color: $desaturatedBlue;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    &__box {
+        background-color: $veryPaleBlue;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 0.7rem;
+        padding: 1rem 0;
+        margin: 0 1.5625rem 1.5rem;
+
+        @media (min-width: 40em) {
+            margin: 0 3rem 1.5rem;
+            gap: 2.4375rem;
+            padding: 1.5rem 0;
+        }
+
+        div {
+            margin-left: -1.25rem;
+
+            @media (min-width: 40em) {
+                margin-left: -3.625rem;
+            }
+        }
+
         h2 {
-            padding-top: 2.3125rem;
-            color: $darkBlue;
+            font-size: 1rem;
         }
         
-        p {
-            padding-top: 1.8125rem;
+        &__subheading {
+            color: $darkBlue;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+        
+        &__price {
             color: $desaturatedBlue;
-            line-height: 1.6;
-        }
-    }
-    
-    .item-box {
-        margin-top: 2rem;
-        width: 17.5rem;
-        padding: 1rem;
-        background: $veryPaleBlue;
-        border-radius: 0.6rem;
-
-        @media (min-width: 48em) {
-            width: 19.875rem;
+            font-weight: lighter;
+            margin: 0;
         }
 
-        .item-text {
-            padding: 0 3.1875rem 0 1rem;
-
-            p {
-                margin: 0;
-            }
-
-            .type {
-                font-weight: 700;
-                color: $darkBlue;
-            }
-
-            .price {
-                color: $desaturatedBlue;
-            }
-
-        }
-
-        a {
-            margin: -1rem;
-
-            @media (min-width: 48em) {
-                margin-left: 1rem;
-            }
-
-            font-weight: 700;
-            font-size: 0.9rem;
+        &__link {
             color: $brightBlue;
+            font-size: 0.9rem;
+            font-weight: 800;
 
             &:hover {
-                color: $desaturatedBlue;
+                text-decoration: none;
+                color: $fadeBlue;
             }
         }
     }
 
-    .btn-box {
-        margin-top: 1.5rem;
+    &__btn {
+        text-align: center;
+        margin: 0 1.5625rem; 
 
-        .success-btn, a {
-            font-weight: 700;
-            cursor: pointer;
+        @media (min-width: 40em) {
+            margin: 0 3rem;
         }
 
-        .success-btn {
-            background: $brightBlue;
-            border: none;
-            border-radius: 0.6rem;
-            width: 17.5rem;
-            height: 3.125rem;
-
-            @media (min-width: 48em) {
-                width: 19.875rem;
-                height: 2.75rem;
-            }
-
-            font-size: 1rem;
-            color: white;
-            box-shadow: 0px 16px 24px -7px $desaturatedBlue;
+        &__proceed, &__cancel {
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        &__proceed {
+            display: block;
+            background-color: $brightBlue;
+            color: $white;
+            padding: 0.875rem 0;
+            border-radius: 0.7rem;
+            margin-bottom: 1.6875rem;
 
             &:hover {
-                background: $desaturatedBlue;
+                background-color: $fadeBlue;
             }
         }
 
-        a {
-            margin-top: 1.75rem;
+        &__cancel {
+            display: block;
             color: $desaturatedBlue;
-            text-decoration: none;
 
             &:hover {
                 color: #000;
@@ -147,23 +156,10 @@ body {
     }
 }
 
-.attribution {
-    position: relative;
-    top: 2rem;
 
-    @media (min-width: 48em) {
-        top: 3rem;
-    }
-
-    font-size: 0.7rem;
-    text-align: center;
-    
-    a {
-        color: $brightBlue;
-        text-decoration: none;
-        
-        &:hover {
-            color: $desaturatedBlue;
-        }
-    }
-}
+// body {
+//     background-image: url("../images/pattern-background-mobile.svg");
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     // height: 100vh;
+// }
